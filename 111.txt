@@ -1,0 +1,104 @@
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+17/11/24 16:32:21 INFO SparkContext: Running Spark version 1.6.1
+17/11/24 16:32:22 INFO SecurityManager: Changing view acls to: fjx19
+17/11/24 16:32:22 INFO SecurityManager: Changing modify acls to: fjx19
+17/11/24 16:32:22 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(fjx19); users with modify permissions: Set(fjx19)
+17/11/24 16:32:23 INFO Utils: Successfully started service 'sparkDriver' on port 4829.
+17/11/24 16:32:24 INFO Slf4jLogger: Slf4jLogger started
+17/11/24 16:32:24 INFO Remoting: Starting remoting
+17/11/24 16:32:24 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@10.0.0.222:4842]
+17/11/24 16:32:24 INFO Utils: Successfully started service 'sparkDriverActorSystem' on port 4842.
+17/11/24 16:32:24 INFO SparkEnv: Registering MapOutputTracker
+17/11/24 16:32:24 INFO SparkEnv: Registering BlockManagerMaster
+17/11/24 16:32:24 INFO DiskBlockManager: Created local directory at C:\Users\fjx19\AppData\Local\Temp\blockmgr-5af8d45b-c4d3-4df5-8b5d-5dd2c96718ad
+17/11/24 16:32:24 INFO MemoryStore: MemoryStore started with capacity 2.4 GB
+17/11/24 16:32:24 INFO SparkEnv: Registering OutputCommitCoordinator
+17/11/24 16:32:24 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+17/11/24 16:32:24 INFO SparkUI: Started SparkUI at http://10.0.0.222:4040
+17/11/24 16:32:24 INFO Executor: Starting executor ID driver on host localhost
+17/11/24 16:32:24 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 4851.
+17/11/24 16:32:24 INFO NettyBlockTransferService: Server created on 4851
+17/11/24 16:32:24 INFO BlockManagerMaster: Trying to register BlockManager
+17/11/24 16:32:24 INFO BlockManagerMasterEndpoint: Registering block manager localhost:4851 with 2.4 GB RAM, BlockManagerId(driver, localhost, 4851)
+17/11/24 16:32:24 INFO BlockManagerMaster: Registered BlockManager
+17/11/24 16:32:25 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 107.7 KB, free 107.7 KB)
+17/11/24 16:32:25 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 9.8 KB, free 117.5 KB)
+17/11/24 16:32:25 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:4851 (size: 9.8 KB, free: 2.4 GB)
+17/11/24 16:32:25 INFO SparkContext: Created broadcast 0 from textFile at Test.scala:13
+17/11/24 16:32:26 INFO FileInputFormat: Total input paths to process : 1
+17/11/24 16:32:26 INFO SparkContext: Starting job: count at Test.scala:14
+17/11/24 16:32:26 INFO DAGScheduler: Got job 0 (count at Test.scala:14) with 2 output partitions
+17/11/24 16:32:26 INFO DAGScheduler: Final stage: ResultStage 0 (count at Test.scala:14)
+17/11/24 16:32:26 INFO DAGScheduler: Parents of final stage: List()
+17/11/24 16:32:26 INFO DAGScheduler: Missing parents: List()
+17/11/24 16:32:26 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[2] at filter at Test.scala:14), which has no missing parents
+17/11/24 16:32:26 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 3.0 KB, free 120.5 KB)
+17/11/24 16:32:26 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 1828.0 B, free 122.3 KB)
+17/11/24 16:32:26 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on localhost:4851 (size: 1828.0 B, free: 2.4 GB)
+17/11/24 16:32:26 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+17/11/24 16:32:26 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 0 (MapPartitionsRDD[2] at filter at Test.scala:14)
+17/11/24 16:32:26 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks
+17/11/24 16:32:26 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 2066 bytes)
+17/11/24 16:32:26 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+17/11/24 16:32:26 INFO CacheManager: Partition rdd_1_0 not found, computing it
+17/11/24 16:32:26 INFO HadoopRDD: Input split: file:/F:/project/scala/Malakov-master/111.txt:0+39
+17/11/24 16:32:26 INFO deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+17/11/24 16:32:26 INFO deprecation: mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+17/11/24 16:32:26 INFO deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+17/11/24 16:32:26 INFO deprecation: mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+17/11/24 16:32:26 INFO deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id
+17/11/24 16:32:26 INFO MemoryStore: Block rdd_1_0 stored as values in memory (estimated size 224.0 B, free 122.5 KB)
+17/11/24 16:32:26 INFO BlockManagerInfo: Added rdd_1_0 in memory on localhost:4851 (size: 224.0 B, free: 2.4 GB)
+17/11/24 16:32:26 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2581 bytes result sent to driver
+17/11/24 16:32:26 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, partition 1,PROCESS_LOCAL, 2066 bytes)
+17/11/24 16:32:26 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+17/11/24 16:32:26 INFO CacheManager: Partition rdd_1_1 not found, computing it
+17/11/24 16:32:26 INFO HadoopRDD: Input split: file:/F:/project/scala/Malakov-master/111.txt:39+39
+17/11/24 16:32:26 INFO MemoryStore: Block rdd_1_1 stored as values in memory (estimated size 16.0 B, free 122.5 KB)
+17/11/24 16:32:26 INFO BlockManagerInfo: Added rdd_1_1 in memory on localhost:4851 (size: 16.0 B, free: 2.4 GB)
+17/11/24 16:32:26 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 137 ms on localhost (1/2)
+17/11/24 16:32:26 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 2581 bytes result sent to driver
+17/11/24 16:32:26 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 18 ms on localhost (2/2)
+17/11/24 16:32:26 INFO DAGScheduler: ResultStage 0 (count at Test.scala:14) finished in 0.165 s
+17/11/24 16:32:26 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+17/11/24 16:32:26 INFO DAGScheduler: Job 0 finished: count at Test.scala:14, took 0.292706 s
+17/11/24 16:32:26 INFO SparkContext: Starting job: count at Test.scala:15
+17/11/24 16:32:26 INFO DAGScheduler: Got job 1 (count at Test.scala:15) with 2 output partitions
+17/11/24 16:32:26 INFO DAGScheduler: Final stage: ResultStage 1 (count at Test.scala:15)
+17/11/24 16:32:26 INFO DAGScheduler: Parents of final stage: List()
+17/11/24 16:32:26 INFO DAGScheduler: Missing parents: List()
+17/11/24 16:32:26 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[3] at filter at Test.scala:15), which has no missing parents
+17/11/24 16:32:26 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 3.0 KB, free 125.6 KB)
+17/11/24 16:32:26 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 1830.0 B, free 127.3 KB)
+17/11/24 16:32:26 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on localhost:4851 (size: 1830.0 B, free: 2.4 GB)
+17/11/24 16:32:26 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+17/11/24 16:32:26 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 1 (MapPartitionsRDD[3] at filter at Test.scala:15)
+17/11/24 16:32:26 INFO TaskSchedulerImpl: Adding task set 1.0 with 2 tasks
+17/11/24 16:32:26 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 2, localhost, partition 0,PROCESS_LOCAL, 2066 bytes)
+17/11/24 16:32:26 INFO Executor: Running task 0.0 in stage 1.0 (TID 2)
+17/11/24 16:32:26 INFO BlockManager: Found block rdd_1_0 locally
+17/11/24 16:32:26 INFO Executor: Finished task 0.0 in stage 1.0 (TID 2). 2082 bytes result sent to driver
+17/11/24 16:32:26 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 3, localhost, partition 1,PROCESS_LOCAL, 2066 bytes)
+17/11/24 16:32:26 INFO Executor: Running task 1.0 in stage 1.0 (TID 3)
+17/11/24 16:32:26 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 2) in 10 ms on localhost (1/2)
+17/11/24 16:32:26 INFO BlockManager: Found block rdd_1_1 locally
+17/11/24 16:32:26 INFO Executor: Finished task 1.0 in stage 1.0 (TID 3). 2082 bytes result sent to driver
+17/11/24 16:32:26 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 3) in 10 ms on localhost (2/2)
+17/11/24 16:32:26 INFO DAGScheduler: ResultStage 1 (count at Test.scala:15) finished in 0.018 s
+17/11/24 16:32:26 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+17/11/24 16:32:26 INFO DAGScheduler: Job 1 finished: count at Test.scala:15, took 0.038160 s
+Lines with a: 1, Lines with b: 0
+---------------17/11/24 16:32:26 INFO SparkContext: Invoking stop() from shutdown hook
+17/11/24 16:32:26 INFO SparkUI: Stopped Spark web UI at http://10.0.0.222:4040
+17/11/24 16:32:26 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+17/11/24 16:32:26 INFO MemoryStore: MemoryStore cleared
+17/11/24 16:32:26 INFO BlockManager: BlockManager stopped
+17/11/24 16:32:26 INFO BlockManagerMaster: BlockManagerMaster stopped
+17/11/24 16:32:26 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+17/11/24 16:32:26 INFO RemoteActorRefProvider$RemotingTerminator: Shutting down remote daemon.
+17/11/24 16:32:26 INFO SparkContext: Successfully stopped SparkContext
+17/11/24 16:32:26 INFO RemoteActorRefProvider$RemotingTerminator: Remote daemon shut down; proceeding with flushing remote transports.
+17/11/24 16:32:26 INFO ShutdownHookManager: Shutdown hook called
+17/11/24 16:32:26 INFO ShutdownHookManager: Deleting directory C:\Users\fjx19\AppData\Local\Temp\spark-af787e66-d4c3-4f49-b476-3c34439733e4
+
+Process finished with exit code 0
