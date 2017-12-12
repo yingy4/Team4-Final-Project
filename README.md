@@ -1,7 +1,7 @@
 [![CircleCI](https://circleci.com/gh/JunxiFan/Team4-Final-Project.svg?style=svg)](https://circleci.com/gh/JunxiFan/Team4-Final-Project)
 # Team 4 : Smart Music Composer
 
-##synopsis
+## synopsis
  * In our project, we are going to input audio file in 
 format of MIDI and this time we focus on several styles
  of music(Pop, Jazz, Classical music, etc.). After 
