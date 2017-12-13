@@ -7,8 +7,6 @@ import scala.io.Source
 
 
 object Main extends App {
-  //  val config = new SparkConf().setAppName("Team4Final").setMaster("local")
-  //  val sc = new SparkContext(config)
 
 
   var commonPart1 = List[String]()
@@ -42,23 +40,34 @@ object Main extends App {
   commonPart8 = moduleList(8)
 
 
+  val logFile ="music";
+  val config = new SparkConf().setAppName("Team4Final").setMaster("local")
+  val sc = new SparkContext(config)
+  val logData = sc.textFile(logFile, 2).cache()
+  val lyRepo = logData.flatMap(_.split(" ")).toLocalIterator.toList
+  val moduleList2 = Parse.parseLyFile(lyRepo)
+  temptAcB = temptAcB ++ moduleList2(1)
+  temptAcBvB = temptAcBvB ++ moduleList2(3)
+  temptAcBvC = temptAcBvC ++ moduleList2(5)
+  temptAcBvD = temptAcBvD ++ moduleList2(7)
+
   //generate music part
-  for (i <- 101 to 215) {
-    val lyFile = Source.fromFile("music/" + i + "-midi.ly").getLines().flatMap(_.split(" ")).toList
-    //获得List[List[String]]
-    var moduleList = Parse.parseLyFile(lyFile)
-
-    //将获得的每个tAcB部分汇集成一个大的word list
-    //      .filter(_ != "")
-    temptAcB = temptAcB ++ moduleList(1)
-    temptAcBvB = temptAcBvB ++ moduleList(3)
-    temptAcBvC = temptAcBvC ++ moduleList(5)
-    temptAcBvD = temptAcBvD ++ moduleList(7)
-    //    temptAcBvE = temptAcBvE ++ moduleList(9).filter(_ != "")
-    //    temptAcBvF = temptAcBvF ++ moduleList(11).filter(_ != "")
-    //    temptAcBvG = temptAcBvG ++ moduleList(13).filter(_ != "")
-
-  }
+//  for (i <- 101 to 215) {
+//    val lyFile = Source.fromFile("music/" + i + "-midi.ly").getLines().flatMap(_.split(" ")).toList
+//    //获得List[List[String]]
+//    var moduleList = Parse.parseLyFile(lyFile)
+//
+//    //将获得的每个tAcB部分汇集成一个大的word list
+//    //      .filter(_ != "")
+//    temptAcB = temptAcB ++ moduleList(1)
+//    temptAcBvB = temptAcBvB ++ moduleList(3)
+//    temptAcBvC = temptAcBvC ++ moduleList(5)
+//    temptAcBvD = temptAcBvD ++ moduleList(7)
+//    //    temptAcBvE = temptAcBvE ++ moduleList(9).filter(_ != "")
+//    //    temptAcBvF = temptAcBvF ++ moduleList(11).filter(_ != "")
+//    //    temptAcBvG = temptAcBvG ++ moduleList(13).filter(_ != "")
+//
+//  }
 
 
   val seed = System.currentTimeMillis()
