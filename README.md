@@ -21,3 +21,10 @@ format of MIDI and this time we focus on several styles
   2. Download part of data (music in midi form)
   3. Configure Spark locally (using sbt)
   4. Run **WordCount** test in Spark 
+
+· 2nd Week: implement and revise our Scala function that we need to use in our project
+
+· 3rd Week: create a interface for importing data from audio data sets to run our main function
+
+· 4th Week: debug project by testing and preparing final presentation
+
